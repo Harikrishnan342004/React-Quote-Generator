@@ -1,0 +1,71 @@
+body
+{
+  
+  background-image: linear-gradient(to right, #5E2AB2, #161E6C);
+}
+.ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between; /* This will push the buttons to the left and right */
+}
+
+.left-btn {
+  margin-right: auto; /* This will push the Home button to the left */
+  color: white;
+  cursor: pointer;
+  
+ 
+}
+
+.right-btn {
+  margin-left: auto; /* This will push the Bookmark button to the right */
+  color: white;
+  cursor: pointer;
+  padding-left: 13px;
+  
+}
+.Home,.Bookmarks
+{
+  color: wheat;
+  text-decoration: none;
+}
+
+.Output-container
+{
+  width: 773px;
+  height: 263px;
+  top: 153px;
+  left: 396px;
+  border-radius: 30px;
+  background-color: #D05252;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Next-Quote
+{
+  background-color: #009C51;
+  width: 240px;
+  height: 45px;
+  top: 624px;
+  left: 623px;
+  border-radius: 30px;
+  cursor: pointer;
+
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.quote
+{
+  color: white;
+
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
