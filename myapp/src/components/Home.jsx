@@ -31,10 +31,15 @@ const Home = () => {
     fetchQuote();
   };
 
+  const handleBookmark = () => {
+    const bookmarkedQuote = { quote, uthor };
+    const existingBookmarks = JSON.parse(localStorage.getItem('bookmarkedQuotes')) || [];
+    const newBookmarks = [...existingBookmarks, bookmarkedQuote];
+    localStorage.setItem('bookmarkedQuotes', JSON.stringify(newBookmarks));
+  };
 
-  
-  
-  return (
+
+return (
     <div>
     <div className='Output-container'>
       <h3 className='quote'>"{quote}"</h3>
@@ -43,7 +48,7 @@ const Home = () => {
 
       <h3 className='author'>-{uthor}</h3>
 
-      <CiBookmarkPlus className='icon' quote={quote} author={uthor}  />
+      <CiBookmarkPlus className='icon' quote={quote} author={uthor} onClick = {handleBookmark}  />
         </div>
     
       

@@ -1,44 +1,26 @@
-// import React, { useState, useEffect } from 'react';
-// import '../App.css';
+import React, { useEffect, useState } from 'react';
 
-// const Bookmark = () => {
-//   const [bookmarks, setBookmarks] = useState([]);
+const BookPage = () => {
+  const [bookmarkedQuotes, setBookmarkedQuotes] = useState([]);
 
-//   useEffect(() => {
-//     const storedBookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
-//     setBookmarks(storedBookmarks);
-//   }, []);
+  useEffect(() => {
+    const storedBookmarkedQuotes = JSON.parse(localStorage.getItem('bookmarkedQuotes')) || [];
+    setBookmarkedQuotes(storedBookmarkedQuotes);
+  }, []);
 
-//   return (
-//     <div>
-//       <ul className='ul'>
-//         {bookmarks.map((bookmark, index) => (
-//           <li key={index} className='Output-container'>
-//             <h3 className='quote'>"{bookmark.quote}"</h3>
-//             <div className='sideuu'>
-//               <h3 className='author'>-{bookmark.author}</h3>
-//             </div>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// 
-
-
-import React from 'react'
-
-
-export const Bookpage = () => {
   return (
-    <div><h1>hii</h1>
-    
-   
-
+    <div>
+      <h2>Book Page</h2>
+      <div className="bookmarked-list">
+        {bookmarkedQuotes.map((item, index) => (
+          <div key={index} className="Output-container">
+            <p>Quote: {item.quote}</p>
+            <p>Author: {item.uthor}</p>
+          </div>
+        ))}
+      </div>
     </div>
-    
-  )
-}
-export default Bookpage;
+  );
+};
+
+export default BookPage;
