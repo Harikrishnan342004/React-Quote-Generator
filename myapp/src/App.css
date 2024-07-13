@@ -1,8 +1,9 @@
 body
 {
-  
-  background-image: linear-gradient(to right, #5E2AB2, #161E6C);
+  background-color:  rgb(54, 62, 70) ;
+  /* background-image: linear-gradient(to right, #5E2AB2, #161E6C); */
 }
+
 .ul {
   list-style-type: none;
   padding: 0;
@@ -29,6 +30,7 @@ body
 {
   color: wheat;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .Output-container
@@ -38,7 +40,7 @@ body
   top: 153px;
   left: 396px;
   border-radius: 30px;
-  background-color: #D05252;
+  background-color: slategray;
   position: absolute;
   top: 35%;
   left: 50%;
@@ -54,12 +56,13 @@ body
 }
 .Next-Quote
 {
-  background-color: #009C51;
-  width: 240px;
-  height: 45px;
+  background-color: deepskyblue;
+  color: antiquewhite;
+  width: 80px;
+  height: 80px;
   top: 624px;
   left: 623px;
-  border-radius: 30px;
+  border-radius: 50%;
   cursor: pointer;
 
   position: absolute;
